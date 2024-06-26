@@ -1,24 +1,41 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './page/Navbar';
+import About from './page/About';
+import { Skills } from './page/Skils';
+import Project from './page/Project';
+import Education from './page/Education';
+import Contact from './page/Contact';
+import Endpoint from './page/Endpoint';
+import Experience from './page/Experience';
+import { ThemeProvider } from 'styled-components';
+import { darkTheme } from './utils/Themes';
+import styled from "styled-components";
+
 
 function App() {
+
+  const Body = styled.div`
+  background-color: ${({ theme }) => theme.bg};
+  width: 100%;
+  overflow-x: hidden;
+`;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={darkTheme}>
+        <Navbar />
+        <Body>
+          <About />
+          <Skills />
+          <Experience />
+          <Project />
+          <Education />
+          <Contact />
+          <Endpoint />
+        </Body>
+      </ThemeProvider>
+    </>
   );
 }
 
