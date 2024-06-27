@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import { TypeAnimation } from 'react-type-animation';
 import { Grid, Typography, Button } from '@mui/material';
 import img from '../Assets/rahul.jpeg';
-import bganimation from '../Svg/svg+xml;base64,PHN2ZyBjbGFzcz0iQmdBbmltYXRpb25fX3N2ZyIgdmlld0JveD0iMCAwIDYwMiA2MDIiIGZpbGw9Im5vbmUi.svg'
+import bganimation from '../Svg/gif.svg';
 
 const About = () => {
     return (
